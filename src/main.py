@@ -5,7 +5,7 @@ from generate_page import generate_pages_recursively
 
 def main():
     if len(sys.argv) > 1:
-        basepath = sys.argv[1]
+        basepath = sys.argv[1].rstrip("/") + "/"
     else:
         basepath = "/"
     copy_source_to_dir("static", "docs")
